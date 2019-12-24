@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  .container {
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  .promo {
+    height: 300px;
+    background-image: url("https://mate-academy.github.io/fe-program/assets/MA_top.jpg");
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .promo__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .nav {
+    text-align: center;
+  }
+  
+  .nav__toggler-label {
+    display: none;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .nav__toggler-label::before {
+    content: '=';
+  }
+  
+  .nav__toggler:checked ~ .nav__toggler-label::before {
+    content: 'x';
+  }
+  
+  .nav__toggler {
+    display: none;
+  }
+  
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+  
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  @media (max-width: 768px) {
+    .nav__toggler-label {
+      display: inline-block;
+    }
+  
+    .nav__list {
+      flex-direction: column;
+    }
+  
+    .nav__toggler:not(:checked) ~ .nav__list {
+      display: none;
+    }
+  }
+  
+  .nav__link {
+    display: inline-block;
+    padding: 10px 5px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav__link:hover {
+    color: #1fc8db;
+  }
+  
+  .main {
+    padding: 10px;
+    background-color: antiquewhite;
+  }
+  
+  .footer {
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+    height: 300px;
+    color: #fff;
+    background-image: url("https://mate-academy.github.io/fe-program/assets/MA_bottom.jpg");
+    background-size: cover;
+  }
+  
+  .footer__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 100%;
+  }
